@@ -2,6 +2,8 @@
 <%=form_for @song do |f|%>
   <%=f.label :title%>
   <%= f.text_field :title%>
+  <%=f.label :released%>
+  <%f.checkbox :released%>
   <%=f.label :release_year%>
   <%=f.text_field :release_year%>
   <%= f.submit%>
