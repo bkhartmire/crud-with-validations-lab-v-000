@@ -2,8 +2,10 @@
   <tbody>
     <% @songs.each do |song| %>
       <tr>
-        <td>song.title <%= link_to "Delete", song, method: :delete, data: {confirm: "Really?"}%></td>
-        <td>song.artist_name</td>
+        <%=song.title%>
+        <%= link_to "Delete", song, method: :delete, data: {confirm: "Really?"}%>
+        <%= link_to 'Show', song %>
+        <%= link_to 'Edit', edit_song_path(song) %>
       </tr>
     <%end%>
   </tbody>
