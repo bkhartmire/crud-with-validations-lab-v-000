@@ -3,6 +3,7 @@
     <% @songs.each do |song| %>
       <tr>
         <%=song.title%>
+        <%=song.artist_name%>
         <%= link_to "Delete", song, method: :delete, data: {confirm: "Really?"}%>
         <%= link_to 'Show', song %>
         <%= link_to 'Edit', edit_song_path(song) %>
