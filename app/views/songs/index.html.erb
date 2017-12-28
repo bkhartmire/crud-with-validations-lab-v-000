@@ -4,11 +4,9 @@
       <tr>
         <%=song.title%>
         <%=song.artist_name%>
-        <%if song.released%>
-          <%=song.release_year%>
-        <%else%>
-          Never released.
-        <%end%>
+        <%=song.released%>
+        <%=song.release_year%>
+        <%=song.genre%>
         <%= link_to "Delete", song, method: :delete, data: {confirm: "Really?"}%>
         <%= link_to 'Show', song %>
         <%= link_to 'Edit', edit_song_path(song) %>
